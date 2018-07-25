@@ -6,13 +6,12 @@ function mostrar()
 	
 	var respuesta="si";
 
-	while(respuesta!="no")
+	/*while(respuesta!="no")
 	{
-		
-	
-	}
+			
+	}*/
 
-
+	document.write("hola");
 
 
 }//FIN DE LA FUNCIÓN
