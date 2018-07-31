@@ -43,6 +43,9 @@ function mostrar()
 	var edadmayor;
 	var edadmenor;
 	var edadmujermayor;
+	//5
+	var sexodelmayor;
+	var sexodelmenor;
 
 	
 	while(contador < 3)
@@ -87,16 +90,15 @@ function mostrar()
 		//1-2-3-
 		if(sexo == "f")
 		{	
+			cantmujeres++;
 			if(edad < 18)
 			{
 			cantmenores++;
-			cantmujeres++;
 			cantmujeresmenores++;
 			edadtotalmujeres+= edad;
 			}else
 			{
 			cantmayores++;
-			cantmujeres++;
 			cantmujeresmayores++;
 			edadtotalmujeres+= edad;
 			}
@@ -117,17 +119,16 @@ function mostrar()
 			
 		if(sexo == "m")
 		{
+			canthombres++;
 			if(edad < 18)
 			{
 			cantmenores++;
-			canthombres++;
 			canthombresmenores++;
 			edadtotalhombres+= edad;
 			}
 			 else
 			{
 			cantmayores++;
-			canthombres++;
 			canthombresmayores++;
 			edadtotalhombres+= edad;
 			
@@ -142,18 +143,23 @@ function mostrar()
 		if(contador == 0)
 		{
 			nombredelmayor=nombre;
+			nombredelmenor=nombre;
 			edadmayor=edad;
 			edadmenor=edad;
+			sexodelmenor=sexo;
+			sexodelmayor=sexo;
 		}
 
 		if(edad > edadmayor)
 		{
 			edadmayor = edad;
 			nombredelmayor = nombre;
+			sexodelmayor=sexo;
 		}else if (edad < edadmenor)
 		{
 			edadmenor = edad;
 			nombredelmenor = edad;
+			sexodelmenor=sexo;
 		}
 
 		//contador
@@ -185,6 +191,9 @@ function mostrar()
 	document.write("Punto 4:" + "<br>");
 	document.write("El nombre del mayor es: " + nombredelmayor + "<br>");
 	document.write("El nombre del menor es: " + nombredelmenor + "<br>");
-	document.write("El nombre de la mujer mayor " + nombremujermayor + "<br>");
+	document.write("El nombre de la mujer mayor es: " + nombremujermayor + "<br>");
+	document.write("Punto 5:" + "<br>");
+	document.write("El sexo de la persona mayor es: " + sexodelmayor + "<br>");
+	document.write("El sexo de la persona menor es: " + sexodelmenor + "<br>");
 	//while(contador)
 }
