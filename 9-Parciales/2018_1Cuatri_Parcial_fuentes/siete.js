@@ -46,6 +46,8 @@ function mostrar()
 	//5
 	var sexodelmayor;
 	var sexodelmenor;
+	var sexomultiplodecinco;
+	var bandera=0;
 
 	
 	while(contador < 3)
@@ -67,6 +69,11 @@ function mostrar()
 			edad=parseInt(edad);
 		}
 
+		if(edad%5==0 && bandera==0)
+		{	
+			sexomultiplodecinco = sexo;
+			bandera==1;
+		}
 		//hasta aca obtengo todos los datos.
 		//1-
 		/*if(sexo == "f")
@@ -192,8 +199,10 @@ function mostrar()
 	document.write("El nombre del mayor es: " + nombredelmayor + "<br>");
 	document.write("El nombre del menor es: " + nombredelmenor + "<br>");
 	document.write("El nombre de la mujer mayor es: " + nombremujermayor + "<br>");
+
 	document.write("Punto 5:" + "<br>");
 	document.write("El sexo de la persona mayor es: " + sexodelmayor + "<br>");
 	document.write("El sexo de la persona menor es: " + sexodelmenor + "<br>");
+	document.write("El sexo de la primer persona multiplo de 5: " + sexomultiplodecinco + "<br>");
 	//while(contador)
 }
