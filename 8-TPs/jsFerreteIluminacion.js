@@ -15,7 +15,10 @@ function CalcularPrecio ()
 	var precioUni;
 	var precioBruto;
 	var descuento;
-	var precioFinal;
+	var descuentoapli;
+	var preciofinal;
+	var ingresobruto;
+
 
 	cantidad= document.getElementById('Cantidad').value;
 	cantidad=parseInt(cantidad);
@@ -83,9 +86,18 @@ function CalcularPrecio ()
 
 
 
- 	precioFinal=precioBruto*descuento;
+ 	descuentoapli=precioBruto*descuento;
+ 	preciofinal= precioBruto - descuentoapli;
 
- 	document.getElementById('precioDescuento').value=precioFinal;
+ 	if(preciofinal > 120)
+ 	{
+ 		ingresobruto = preciofinal * 0.1;
+ 		preciofinal = preciofinal + ingresobruto;
+ 		alert("Usted pago " + ingresobruto + " de IIBB");
+ 	}
+ 	
+
+ 	document.getElementById('precioDescuento').value=preciofinal;
 
 
 
